@@ -1,0 +1,2 @@
+# Auto_playlist_creator
+指定時間に収まるプレイリストを自動生成
