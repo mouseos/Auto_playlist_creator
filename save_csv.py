@@ -10,7 +10,7 @@ exist = []
 if len(sys.argv) > 1:
 	if((os.path.exists(sys.argv[1]))):
 		path = pathlib.Path(sys.argv[1]).resolve()
-		fieldnames = ['Path', 'Duration','Category','Tag']
+		fieldnames = ['Path', 'Duration','Category','Tag','type']
 		with open('audio_files.csv', 'a+') as csv_file:
 			csv_file.seek(0)
 			reader = csv.DictReader(csv_file)
