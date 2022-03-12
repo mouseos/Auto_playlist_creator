@@ -7,11 +7,11 @@ from pydub import AudioSegment
 #既に存在するファイル
 exist = []
 #パス
-if len(sys.argv) > 1:
+if len(sys.argv) > 2:
 	if((os.path.exists(sys.argv[1]))):
 		path = pathlib.Path(sys.argv[1]).resolve()
 		fieldnames = ['Path', 'Duration','Category','Tag','type']
-		with open('audio_files.csv', 'a+') as csv_file:
+		with open(sys.argv[2], 'a+') as csv_file:
 			csv_file.seek(0)
 			reader = csv.DictReader(csv_file)
 			writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -35,9 +35,9 @@ if len(sys.argv) > 1:
 						except Exception:
 							pass
 	else:
-		print("存在するパスを指定してください。")
+		print("使い方：python3 save_csv.py [音声ファイルが含まれているパス] [CSVファイル名]")
 else:
-	print("パスを指定してください。")
+	print("使い方：python3 save_csv.py [音声ファイルが含まれているパス] [CSVファイル名]")
 
 
 

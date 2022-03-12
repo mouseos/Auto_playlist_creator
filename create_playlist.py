@@ -69,6 +69,7 @@ while True:
 			set_duration-=3600
 		else:
 			print("この条件では作成できません。")
+			exit()
 	elif (set_duration<=0):
 			#print(result1)#長さ一覧
 			for dur in result1:
