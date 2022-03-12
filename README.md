@@ -6,11 +6,15 @@
 
 １，csvにパスと長さを登録
 
-python3 save\_csv.py \[音声ファイルが含まれているパス\] \[CSVファイル名\]
+```shell
+python3 save_csv.py [音声ファイルが含まれているパス] [CSVファイル名]
+```
 
 2,csvから読み込んで作成
 
-python3 ./create\_playlist.py \[CSVパス\] \[前許容秒数\] \[後許容秒数\] \[プレイリスト全体の秒数\] \[m3uファイル名\]
+```shell
+python3 ./create_playlist.py [CSVパス] [前許容秒数] [後許容秒数] [プレイリスト全体の秒数] [m3uファイル名]
+```
 
 例：
 
@@ -18,8 +22,12 @@ python3 ./create\_playlist.py \[CSVパス\] \[前許容秒数\] \[後許容秒�
 
 1,./audio以下のファイルを登録（新しいファイルを追加するたびに追加）
 
-python3 save\_csv.py ./audio audio.csv
+```shell
+python3 save_csv.py ./audio audio.csv
+```
 
 2,１時間=3600秒
 
-python3 ./create\_playlist.py audio.csv 10 0 3600 playlist,m3u
+```shell
+python3 ./create_playlist.py audio.csv 10 0 3600 playlist,m3u
+```
