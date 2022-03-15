@@ -92,6 +92,7 @@ while True:
 					print("20回再試行しましたが作成できませんでした。この条件では作成できません。")
 					exit()
 			else:
+				print("条件に一致しました。シャッフルして保存します。")
 				#print("m3u")
 				#print(m3u)
 				with open(sys.argv[5], 'w') as m:
@@ -99,6 +100,5 @@ while True:
 						m.write("%s\n" % p)
 				break
 				print("終了します。")
-
 
 
